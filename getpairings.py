@@ -70,9 +70,9 @@ while True:
             for span in points_spans:
                 # Check if 'style' attribute exists
                 if 'style' in span.attrs:
-                    if 'rgb(102, 187, 106)' in span['style']:  # If green, it's a win
+                    if 'rgb(102, 187, 106)' in span['style']or 'rgb(46, 125, 50)' in span['style']:  # If green, it's a win
                         win_points.append(int(span.get_text()))
-                    elif 'rgb(244, 67, 54)' in span['style']:  # If red, it's a loss
+                    elif 'rgb(244, 67, 54)' in span['style'] or 'rgb(211, 47, 47)' in span['style']:  # If red, it's a loss
                         loss_points.append(int(span.get_text()))
 
             wins = len(win_points)
